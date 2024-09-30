@@ -1,16 +1,35 @@
 package com.example.cv2.model;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Car {
+    private long id;
+
+    @NotEmpty
+    @Min(value = 6)
+    @Max(value = 6)
     private String spz;
+
+    @NotEmpty
+    @Min(value = 2)
+    @Max(value = 10)
     private String color;
+
+    @Size(min = 1, max = 100)
     private float tankVolume;
+
+    @Size(min = 1, max = 7)
     private int numberOfSeats;
 
-    public Car(String spz, String color, float tankVolume, int numberOfSeats) {
-        this.spz = spz;
-        this.color = color;
-        this.tankVolume = tankVolume;
-        this.numberOfSeats = numberOfSeats;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getSpz() {

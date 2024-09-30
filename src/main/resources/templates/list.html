@@ -5,8 +5,9 @@
     <title>sadfasdf</title>
 </head>
 <body>
+    <a th:href="@{'/create'}">New Car</a>
     <ul>
-        <li th:each="car, iter: ${cars}" th:text="${car.spz}">
+        <li th:each="car, iter: ${cars}">
             <a th:href="@{'/detail/' + ${iter.index}}">
                 <span th:text="${car.spz}"></span>
             </a>
