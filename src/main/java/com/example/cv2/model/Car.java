@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 public class Car {
-    private long id;
+    private long id = -1;
 
     @NotEmpty
     @Min(value = 6)
